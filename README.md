@@ -23,29 +23,35 @@ The skill turns a problem, research notes, analytics, benchmark work, design exp
 
 ## Install with skills.sh
 
-Install this skill with the `skills` CLI. No global CLI installation is required:
+The recommended installer is the `skills` CLI, which runs through `npx` and requires no global CLI setup.
+
+### Global installation
+
+Use `-g` to make the skill available across your projects and supported agents:
 
 ```bash
-npx skills add m031n/design-document-writer --skill design-document-writer -g
+npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --global --yes
 ```
 
-To install it only for the current project, omit `-g`:
+### Project installation
+
+Install it in the current project by omitting `--global`:
 
 ```bash
-npx skills add m031n/design-document-writer --skill design-document-writer
+npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --yes
 ```
 
-The repository contains one discoverable skill at its root: `design-document-writer`.
+The repository exposes one skill, `design-document-writer`, so the `--skill` option makes the intended package explicit. To install all skills from a multi-skill repository, use `--all` instead.
 
-## Install manually
+### Verify the installation
 
-Copy or clone this folder into the global skills directory used by your agent:
+List globally installed skills with:
 
 ```bash
-git clone https://github.com/m031n/design-document-writer.git ~/.agents/skills/design-document-writer
+npx skills ls --global
 ```
 
-For Codex installations that use `~/.codex/skills`, copy the skill there instead:
+If the CLI is unavailable, clone the repository into the global skills directory used by your agent:
 
 ```bash
 git clone https://github.com/m031n/design-document-writer.git ~/.codex/skills/design-document-writer
