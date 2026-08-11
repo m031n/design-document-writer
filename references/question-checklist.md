@@ -2,6 +2,8 @@
 
 Use this checklist during intake. Ask only questions relevant to the material and initiative. Optional sections still require an explicit check.
 
+When the author provides only a Problem, ask the questions in [references/intake-gate.md](intake-gate.md) before producing any document draft. Do not use this checklist as permission to fill the answers yourself.
+
 ## Context and Problem
 
 - What is the current system behavior?
@@ -86,3 +88,5 @@ Ask for missing information once. If the author does not have it, use one of the
 - `Not available`: the author confirms that it does not exist or cannot be obtained.
 - `Not applicable`: the section does not apply to this initiative.
 - `Needs validation`: the claim or decision exists but lacks sufficient Evidence.
+
+The author must provide the status or answer. The agent must not choose `Not available`, `Not applicable`, or `Needs validation` on the author's behalf merely because an input is absent from the first message.

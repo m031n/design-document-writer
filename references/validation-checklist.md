@@ -2,6 +2,8 @@
 
 ## Structure
 
+- [ ] The Intake Gate passed before a complete document was drafted.
+- [ ] If the input was Problem-only, the response stopped at the audit and questions stage.
 - [ ] Context describes the current state without proposing a solution.
 - [ ] Problem names a pain or gap and includes impact.
 - [ ] Problem type is identifiable: User pain, Business impact, Opportunity gap, or Competitive gap.
@@ -17,6 +19,8 @@
 - [ ] Metric denominators, populations, and time windows are preserved when supplied.
 - [ ] Evidence is not confused with interpretation or design rationale.
 - [ ] Missing information is labeled `Not provided`, `Not available`, `Not applicable`, or `Needs validation`.
+- [ ] Each missing-information status was supplied or confirmed by the author.
+- [ ] No Metric was defined or populated from the Problem alone.
 
 ## Benchmarks and Figma
 

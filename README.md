@@ -21,6 +21,9 @@ The skill turns a problem, research notes, analytics, benchmark work, design exp
 > [!IMPORTANT]
 > The skill does not invent evidence, metrics, links, user behavior, or design decisions. If information is missing, it asks first. When the author confirms that information is unavailable, the document records `Not provided`, `Not available`, `Not applicable`, or `Needs validation`.
 
+> [!NOTE]
+> If you provide only a Problem, the skill stops at an Intake Gate. It lists what it received, identifies missing sections, asks the completion questions, and waits. It does not produce a complete document or invent Metrics from the Problem.
+
 ## Install with skills.sh
 
 The recommended installer is the `skills` CLI, which runs through `npx` and requires no global CLI setup.

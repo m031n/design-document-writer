@@ -23,6 +23,28 @@ The audience is primarily Product Designers and Product Managers. Use Farsi as t
 - Preserve the author's product meaning, terminology, numbers, and links while improving structure and writing quality.
 - A valid outcome may be `Proceed`, `Iterate`, `Defer`, or `No change`. Do not force a new design.
 - Write the final document in Markdown. Use tables or diagrams only when they improve usability.
+- Do not produce a complete document from a Problem-only input.
+- Do not define, suggest, or populate Metrics unless the author supplies them or explicitly approves a proposed Metric as a Goal rather than Evidence.
+- When the Intake Gate is not passed, the only allowed output is the completeness audit and grouped questions in [references/intake-gate.md](references/intake-gate.md).
+
+## Intake Gate: mandatory stop before drafting
+
+The first response is an audit, not a document, unless the author has already supplied enough material and explicitly asks to draft.
+
+Pass the gate only when the supplied material contains, or the author has explicitly marked as unavailable/not applicable, the relevant inputs for:
+
+- Context and Problem;
+- Goals and Non-Goals;
+- Evidence or an explicit Evidence status;
+- Research and benchmark material, when applicable;
+- Design exploration or an explicit statement that no options were explored;
+- UX Flow and Design Solution, when the work has reached that stage;
+- Metrics or an explicit statement that Metrics are not available;
+- Open Questions and Post-Launch follow-up, when applicable.
+
+If the author only provides a Problem, stop. Do not write Context, Goals, Metrics, Research, Design Solution, Decision, or Post-Launch content. Use the audit format in [references/intake-gate.md](references/intake-gate.md), list what was received and what is missing, then ask the grouped questions.
+
+After asking, wait for the author's answers. If the author says `ندارم`، `Not available`، `Not applicable` or `Skip` for a section, record that status and continue the audit. Do not turn the status into invented content. Do not draft until the author has answered the relevant questions or explicitly approved skipping them.
 
 ## Workflow
 
@@ -60,9 +82,9 @@ Use the benchmark table in [references/document-template.md](references/document
 
 Check the supplied material against the required document structure in [references/document-template.md](references/document-template.md) and the question set in [references/question-checklist.md](references/question-checklist.md).
 
-Ask focused questions for every relevant gap. Group questions by section and avoid asking for information that is already present. Ask before drafting, not after silently filling gaps.
+Ask focused questions for every relevant gap. Group questions by section and avoid asking for information that is already present. Ask before drafting, not after silently filling gaps. Use the exact stop behavior and response shape in [references/intake-gate.md](references/intake-gate.md).
 
-If the author says the information does not exist, record the appropriate status and continue. Do not repeatedly ask for unavailable information.
+If the author says the information does not exist, record the appropriate status and continue. Do not repeatedly ask for unavailable information. A status is not an invitation to invent a substitute.
 
 ### 3. Draft the evidence map
 
@@ -77,6 +99,8 @@ Before writing analysis, distinguish:
 For metrics, preserve the available definition and source. When a metric exists, capture `Metric`, `Baseline`, `Target`, `Timeframe`, `Data Source`, and `Owner`. If a field is unavailable, mark it rather than estimating it.
 
 ### 4. Write the document
+
+Start this stage only after the Intake Gate has passed. If the gate has not passed, do not use this section.
 
 Use the canonical structure in [references/document-template.md](references/document-template.md). Keep sections that are relevant and have content. For each omitted optional section, do not invent content; if the omission matters, state why it is not included.
 
