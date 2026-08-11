@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design document writer"
+  short_description: "Create evidence-based Farsi product design documents"
+  default_prompt: "Create a Farsi product design document from my problem, research, design process, evidence, and linked artifacts."
