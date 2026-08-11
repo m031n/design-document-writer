@@ -1,5 +1,7 @@
 # Design document writer
 
+[![skills.sh](https://skills.sh/b/m031n/design-document-writer)](https://skills.sh/m031n/design-document-writer)
+
 Create evidence-based product design process documents in Farsi for Product Designers, Product Managers, and future design agents.
 
 The skill turns a problem, research notes, analytics, benchmark work, design exploration, Figma links, and delivery decisions into a structured Markdown document. It asks about missing information before drafting and supports `Proceed`, `Iterate`, `Defer`, and `No change` outcomes.
@@ -19,15 +21,37 @@ The skill turns a problem, research notes, analytics, benchmark work, design exp
 > [!IMPORTANT]
 > The skill does not invent evidence, metrics, links, user behavior, or design decisions. If information is missing, it asks first. When the author confirms that information is unavailable, the document records `Not provided`, `Not available`, `Not applicable`, or `Needs validation`.
 
-## Install globally
+## Install with skills.sh
 
-Copy or clone this folder into the global skills directory used by your agent:
+The recommended installer is the `skills` CLI, which runs through `npx` and requires no global CLI setup.
+
+### Global installation
+
+Use `-g` to make the skill available across your projects and supported agents:
 
 ```bash
-git clone https://github.com/m031n/design-document-writer.git ~/.agents/skills/design-document-writer
+npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --global --yes
 ```
 
-For Codex installations that use `~/.codex/skills`, copy the skill there instead:
+### Project installation
+
+Install it in the current project by omitting `--global`:
+
+```bash
+npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --yes
+```
+
+The repository exposes one skill, `design-document-writer`, so the `--skill` option makes the intended package explicit. To install all skills from a multi-skill repository, use `--all` instead.
+
+### Verify the installation
+
+List globally installed skills with:
+
+```bash
+npx skills ls --global
+```
+
+If the CLI is unavailable, clone the repository into the global skills directory used by your agent:
 
 ```bash
 git clone https://github.com/m031n/design-document-writer.git ~/.codex/skills/design-document-writer
@@ -99,4 +123,3 @@ The skill treats a decision to preserve the current experience as valid design w
 - `No change`: keep the current behavior because the evidence or risk profile does not justify a change.
 
 For `Defer` and `No change`, the document should explain the evidence, remaining uncertainty, risks of changing, and the condition that would reopen the decision.
-
