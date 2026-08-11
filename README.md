@@ -26,38 +26,26 @@ The skill turns a problem, research notes, analytics, benchmark work, design exp
 
 ## Install with skills.sh
 
-The recommended installer is the `skills` CLI, which runs through `npx` and requires no global CLI setup.
-
-### Global installation
-
-Use `-g` to make the skill available across your projects and supported agents:
-
-```bash
-npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --global --yes
-```
-
-### Project installation
-
-Install it in the current project by omitting `--global`:
+The recommended installer is the `skills` CLI, which runs through `npx` and requires no CLI setup. Install the skill in the current project:
 
 ```bash
 npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --yes
 ```
 
-The repository exposes one skill, `design-document-writer`, so the `--skill` option makes the intended package explicit. To install all skills from a multi-skill repository, use `--all` instead.
+The repository exposes one skill, `design-document-writer`, so the `--skill` option makes the intended package explicit. This project-scoped command avoids agent-specific global-install limitations. To install all skills from a multi-skill repository, use `--all` instead.
 
 ### Verify the installation
 
-List globally installed skills with:
+List the skills available in the current project with:
 
 ```bash
-npx skills ls --global
+npx skills ls
 ```
 
-If the CLI is unavailable, clone the repository into the global skills directory used by your agent:
+If the CLI is unavailable, clone the repository into the current project's skills directory:
 
 ```bash
-git clone https://github.com/m031n/design-document-writer.git ~/.codex/skills/design-document-writer
+git clone https://github.com/m031n/design-document-writer.git .agents/skills/design-document-writer
 ```
 
 Restart the agent session if the skill does not appear in the available skills list.
