@@ -4,7 +4,7 @@
 
 Create evidence-based product design process documents in Farsi for Product Designers, Product Managers, and future design agents.
 
-The skill turns a problem, research notes, analytics, benchmark work, design exploration, Figma links, and delivery decisions into a structured Markdown document. It asks about missing information before drafting and supports `Proceed`, `Iterate`, `Defer`, and `No change` outcomes.
+The skill turns a problem, research notes, analytics, benchmark work, design exploration, Figma links, and delivery decisions into a structured Markdown document. It asks about missing information before drafting and supports `Proceed`, `Iterate`, `Defer`, and `No change` outcomes. Its Farsi writing guidance is adapted for product documents from [ali2000hos/persian-writing](https://github.com/ali2000hos/persian-writing), with evidence integrity and Product Design terminology preserved.
 
 ## What it covers
 
@@ -26,26 +26,38 @@ The skill turns a problem, research notes, analytics, benchmark work, design exp
 
 ## Install with skills.sh
 
-The recommended installer is the `skills` CLI, which runs through `npx` and requires no CLI setup. Install the skill in the current project:
+The recommended installer is the `skills` CLI, which runs through `npx` and requires no global CLI setup.
+
+### Global installation
+
+Use `-g` to make the skill available across your projects and supported agents:
+
+```bash
+npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --global --yes
+```
+
+### Project installation
+
+Install it in the current project by omitting `--global`:
 
 ```bash
 npx skills add https://github.com/m031n/design-document-writer --skill design-document-writer --yes
 ```
 
-The repository exposes one skill, `design-document-writer`, so the `--skill` option makes the intended package explicit. This project-scoped command avoids agent-specific global-install limitations. To install all skills from a multi-skill repository, use `--all` instead.
+The repository exposes one skill, `design-document-writer`, so the `--skill` option makes the intended package explicit. To install all skills from a multi-skill repository, use `--all` instead.
 
 ### Verify the installation
 
-List the skills available in the current project with:
+List globally installed skills with:
 
 ```bash
-npx skills ls
+npx skills ls --global
 ```
 
-If the CLI is unavailable, clone the repository into the current project's skills directory:
+If the CLI is unavailable, clone the repository into the global skills directory used by your agent:
 
 ```bash
-git clone https://github.com/m031n/design-document-writer.git .agents/skills/design-document-writer
+git clone https://github.com/m031n/design-document-writer.git ~/.codex/skills/design-document-writer
 ```
 
 Restart the agent session if the skill does not appear in the available skills list.

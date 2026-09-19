@@ -1,44 +1,58 @@
 # Humanizing checklist for Farsi design documents
 
-Use this checklist after the document is structurally complete and before delivery. Diagnose patterns first, then edit only what needs work. A single pattern is not proof of AI writing; look for clusters and repetitive habits.
+این Checklist از رویکرد [persian-writing](https://github.com/ali2000hos/persian-writing) برای ویرایش طبیعی فارسی استفاده می‌کند. هدف، وضوح، دقت و تناسب با مخاطب است؛ نه تغییر عمدی سبک برای فریب ابزارهای تشخیص متن.
 
-## Sentence-level edits
+## ۱. لحن و زاویه دید
 
-- Cut throat-clearing phrases such as «لازم به ذکر است که»، «شایان ذکر است»، «باید توجه داشت که»، «در واقع» and «به‌طور کلی» when they announce an ordinary statement.
-- Remove «نه‌تنها ... بلکه ...» when it is only a rhetorical habit. State the claim directly.
-- Break reflexive three-item lists. Keep only the items that add information and vary the number of examples naturally.
-- Replace vague `از X تا Y` ranges with the actual items or the one relevant example.
-- Replace «که نشان‌دهنده اهمیت...» or «که بیانگر تحول...» with a specific, checkable consequence, or remove it.
-- Delete repeated openers such as «همچنین»، «علاوه بر این»، «از سوی دیگر» and «در این راستا» unless the relationship really needs one.
-- Prefer simple verbs and direct subjects. Do not hide the actor in unnecessary passive or subjectless fragments.
+- نوع خروجی را از لحن درخواست جدا کنید. Design Document حرفه‌ای معمولاً `formal-but-human` است.
+- «می‌باشد»، «گردید» و «به عمل آورد» را با «است»، «شد» و «کرد» جایگزین کنید.
+- لحن رسمی را با محاوره اشتباه نگیرید. «می‌شود» در سند حرفه‌ای درست است؛ «میشه» فقط در نقل‌قول یا متن محاوره‌ای مناسب است.
+- واقعیت‌ها را خنثی بنویسید، کار تیم را با «ما» و اقدام کاربر را با فعل مستقیم نشان دهید.
+- از تکرار «کاربر می‌تواند» در همه جمله‌ها پرهیز کنید؛ وقتی فاعل روشن است، فعل مستقیم کافی است.
 
-## Paragraph and structure edits
+## ۲. ویرایش جمله
 
-- Vary sentence length and paragraph shape without manufacturing drama or awkward fragments.
-- Remove summary paragraphs that only repeat the preceding section.
-- Keep bullets for scannable parallel items, tables, or steps. Turn short related lists into prose when a list adds no usability.
-- Do not add generic sections such as «چالش‌ها»، «چشم‌انداز آینده» or «جمع‌بندی» unless the content requires them. The DDS structure remains mandatory where it applies.
-- Preserve asymmetry when it reflects the author's actual reasoning, uncertainty, or a meaningful exception.
+- عبارت‌های آغازگر بی‌فایده مانند «لازم به ذکر است»، «شایان ذکر است»، «در واقع» و «به‌طور کلی» را حذف کنید.
+- «در راستای» را معمولاً با «برای» یا یک فعل دقیق جایگزین کنید.
+- جمله‌های دارای چند «که» را بشکنید؛ هر جمله یک ایده اصلی داشته باشد.
+- «نه‌تنها ... بلکه ...» را وقتی فقط الگوی بلاغی است حذف و ادعا را مستقیم بیان کنید.
+- «که نشان‌دهنده اهمیت...» و عبارت‌های مشابه را حذف یا به یک Interpretation مستقل با Evidence تبدیل کنید.
+- «نقش بسزایی ایفا می‌کند»، «از اهمیت ویژه‌ای برخوردار است» و «گامی مهم» را فقط وقتی نگه دارید که نتیجه قابل‌سنجش و منبع داشته باشند.
+- عبارت‌های ترجمه‌ای مانند «نگاهی بیندازیم به» و «در پایان روز» را با فعل طبیعی فارسی جایگزین کنید.
+- جمله‌های هم‌اندازه و پاراگراف‌های هم‌شکل را بازبینی کنید. تنوع باید از جزئیات واقعی، Caveat و تغییر موضوع بیاید، نه از کوتاه‌کردن مصنوعی جمله‌ها.
 
-## Voice and evidence
+## ۳. Evidence و ادعا
 
-- Prefer one concrete detail, number, user behavior, source, or decision over several vague adjectives.
-- Remove «برخی کارشناسان»، «بسیاری معتقدند»، «مطالعات نشان می‌دهد» and similar empty attributions unless the source is named.
-- Do not turn an interpretation into a user finding or a Goal into a proven outcome.
-- Keep rejected options, unresolved questions, and limits visible. Do not smooth the document into false certainty.
-- Keep the author's product terminology and meaningful phrasing. Do not cycle through synonyms just to avoid repetition.
+- واقعیت، نظر، پیش‌بینی و ادعا را از هم جدا کنید.
+- «کارشناسان معتقدند»، «مطالعات نشان می‌دهد» و «تحقیقات ثابت کرده» بدون نام منبع را حذف یا به `Needs validation` تبدیل کنید.
+- تفسیر را به‌جای Observation ننویسید و Goal را به‌عنوان نتیجه اثبات‌شده معرفی نکنید.
+- تناقض میان منابع را آشکار نگه دارید؛ آن را با یک جمله مطمئن‌کننده پنهان نکنید.
+- عدد، نام، نقل‌قول، لینک، Metric و تصمیم را در ویرایش تغییر ندهید.
 
-## Persian mechanics
+## ۴. ضدالگوهای ساختاری
 
-- Use Persian `ی` and `ک` consistently.
-- Use نیم‌فاصله consistently: `می‌شود`، `به‌روزرسانی`، `قابل‌استفاده`.
-- Use Persian punctuation in Persian prose: `،`، `؛`، `؟` and `«»`.
-- Keep digits consistent with the document context. Preserve exact source values, URLs, Metric IDs, code, and technical identifiers.
-- Avoid unnecessary em dashes, semicolons, exclamation marks, boldface, emojis, and title-case English headings.
+- سه‌تایی‌های قابل‌پیش‌بینی مانند «سریع، آسان و مطمئن» را فقط در صورت ضرورت نگه دارید.
+- «از X تا Y» را وقتی دو سر یک طیف واقعی نیستند به فهرست دقیق تبدیل کنید.
+- Emoji را در Headingهای سند محصول حذف کنید، مگر اینکه بخشی از منبع یا نام رسمی باشد.
+- Bullet را برای فهرست واقعی نگه دارید؛ از الگوی تکراری `**عنوان:** توضیح` در همه بندها استفاده نکنید.
+- Summaryای که فقط متن قبل را تکرار می‌کند حذف کنید؛ اما Evidence gap، محدودیت و تصمیم را نگه دارید.
+- واژه‌های هم‌معنی را فقط برای فرار از تکرار عوض نکنید؛ ثبات اصطلاحات محصول مهم‌تر است.
 
-## Final safety check
+## ۵. ویرایش مکانیکی فارسی
 
-- Do not add deliberate mistakes or fake informality.
-- Do not rewrite quoted material, proper names, URLs, Metric labels, or source data as ordinary prose.
-- Do not claim that the result will receive a specific score from an AI detector or bypass one.
-- Confirm that every original fact, link, decision, and uncertainty remains present.
+- `ی` و `ک` فارسی را جایگزین `ي` و `ك` کنید.
+- نیم‌فاصله را در «می‌شود»، «نمی‌توان»، «کاربرها»، «به‌عنوان»، «قابل‌مشاهده» و ترکیب‌های مشابه رعایت کنید.
+- در فارسی از `،`، `؛`، `؟` و «گیومه» استفاده کنید؛ پیش از نشانه فاصله نگذارید و پس از آن یک فاصله بگذارید.
+- از خط تیره بلند یا کوتاه (`—` و `–`) در نثر فارسی استفاده نکنید؛ جمله را بازنویسی کنید.
+- هکسره را بررسی کنید: «کتابِ من» درست است؛ در متن رسمی «این کتاب است» بنویسید، نه «این کتابه».
+- اعداد متن فارسی را فارسی بنویسید. URL، کد، Version، شناسه و مقدار لاتین منبع را دست‌کاری نکنید.
+- یک شیوه را برای «آن‌ها» / «آنها» و «خانه‌ی» / «خانهٔ» انتخاب و در کل سند حفظ کنید.
+- داخل گیومه فاصله نگذارید و فاصله‌های تکراری را حذف کنید.
+
+## ۶. تست نهایی
+
+- سند را یک‌بار با صدای بلند بخوانید و جمله‌های سنگین یا یکنواخت را علامت بزنید.
+- از خود بپرسید: «اگر یک خواننده ایرانی این بخش را ببیند، آیا آن را متن ماشینی می‌داند؟»
+- اگر پاسخ مثبت است، ابتدا Tells زبانی را اصلاح کنید؛ برای تغییر Artificial ریتم، Evidence یا محدودیت را حذف نکنید.
+- مطمئن شوید Humanize pass هیچ واقعیت، منبع، عدم‌قطعیت، تصمیم یا اصطلاح محصولی را از بین نبرده است.
+- متن را برای طبیعی‌ترشدن عمداً غلط، محاوره‌ای، مبهم یا پر از نشانه‌های پنهان نکنید.
